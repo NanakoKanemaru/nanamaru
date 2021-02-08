@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+@media only screen and (min-width:376px) and (max-width:960px) {
+/*tablet用のcssを記述*/
+	
+.top-memu {
+    zoom: 60%;
+    width: auto;
+    height: auto;
+    margin: 10% 0px 0px 4%;
+    z-index: 2;
+    padding: 30px;
+    background-color: #FDFDFD;
+    border: solid #191919 4px;
+    text-align: center;
+}
+	
+	.top-memu logo{
+		
+	width: 80px;
+	height: 80px;
+	}
+	
+	.top-memu ul{
+/*		display: none;*/
+		}
+
+	.top-memu a{
+		text-decoration: none;
+		color: rgba(19,19,19,1.00);	
+	}
+	.flex-direction-nav a:before {
+    font-family: "flexslider-icon";
+    font-size: 20px;
+    display: inline-block;
+    content: '\f001';
+    color: rgba(0,0,0,0.92);
+}
+}
+
+/*----------------------------------------------------*/
+
+@media screen and (max-width:375px) {
+/*スマホ用のcssを記述*/
+	body{
+		margin-right: auto;
+		margin-left: auto;
+		background-color: antiquewhite;
+		height: 97vh;
+		font-size: 30px;
+		background-color: #FDFDFD;
+		font-family: 'Noto Sans JP', sans-serif;
+		}
+	#wrapper{
+		height: 97vh;
+		margin: 10px;
+		display: flex;
+		justify-content:space-between;
+	}
+	
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 80%;
+}
+	.top-memu {
+    zoom: 70%;
+    width: auto;
+    height: auto;
+    margin: 20% auto auto auto;
+    z-index: 2;
+    padding: 30px;
+    background-color: rgb(253, 253, 253);
+    border: 3px solid rgb(25, 25, 25);
+    text-align: center;
+    display: block;
+}
+	
+	.top-memu logo{
+		width: 80px;
+		height: 80px;
+		}
+	
+	.top-memu ul{
+		display: none;
+		padding: 0;
+		margin: 0!important;
+		}
+
+	.top-memu a{
+		text-decoration: none;
+		color: rgba(19,19,19,1.00);	
+	}
+	
+	.tm {
+		 list-style-type: none;
+	}
+
+	
+	.side-design .twitter,.instagram{
+		zoom:60%;
+	}
+	.side-design{
+		zoom:80%;
+		width: 60px;
+		height: 100%;
+		text-align: center;	
+		position: relative;
+	}
+	
+	.side-design .right .twitter {
+    width: 39px;
+    height: 39px;
+    background-image: url(../img/twitter.png);
+    margin: 12px auto;
+}
+	.side-design .right {
+    top: 0px;
+    right: 92%;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    width: auto;
+    height: 350px;
+    z-index: 5;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+}
+	.side-design .right .twitter:hover{
+		background-image: url("../img/twitter-hovar.png");
+		transition: all .5s;
+	}
+	.side-design .right .instagram{
+		width: 39px; height: 39px;
+		background-image: url("../img/lnstagram.png");
+		margin: 0 auto 0 auto;
+	}
+	.side-design .right .instagram:hover{
+		background-image: url("../img/Instagram-hovar.png");
+		transition: all .5s;
+	}
+	
+	.side-design .left {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 93%;
+    margin: auto;
+    width: auto;
+    height: 282px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+}
+	.side-design .left .hidden{
+		visibility:hidden;
+	}
+	.flexslider{
+		width: 200% ;
+		height: 200% ;
+		margin: 0 auto;
+		position: absolute;
+		z-index: -10;
+		bottom: 0px;
+		text-align: center;
+		
+	}
+	element.style {
+    overflow: scroll;
+    position: absolute;
+}
+
+.flex-viewport {
+    max-height: 2000px;
+	height: 200vh;
+	width: 100%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+	.flex-direction-nav{
+		display: none;
+	}
+
+/*
+	.contents{
+		width: 150%;
+		height: 150vw;
+		position: absolute; 
+		top: 100px;  
+		z-index: -10; 
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: -50%;
+		right: 50%;
+		overflow: hidden;
+		text-align: center center;
+		
+	}
+*/
+	.contents {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: -50%;
+    right: 0%;
+    overflow: hidden;
+}
+/*--------------------hamburger--------------------*/
+	.header {
+	  position: fixed;
+	  z-index: 200;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 40px;
+
+	}
+	.global-nav {
+	  position: fixed;
+	  right: -320px; /* これで隠れる */
+	  top: 0;
+	  width: 300px; /* スマホに収まるくらい */
+	  height: 100vh;
+	  padding-top: 40px;
+	  background-color: #FDFDFD;
+	  transition: all .6s;
+	  overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+	  z-index: 201;
+	}
+	.menu-twitter{
+		width: 36px; height: 36px;
+		background-image: url( "../img/twitter-nemu.png");
+		margin: 50px auto 20px auto;
+		transition: all 0.3s ease 0s;}
+	.menu-twitter:hover{
+		background-color:rgba(255,255,255,0.54);
+		background-blend-mode:lighten;
+	}
+	.menu-instagram{
+		width: 36px; height: 36px;
+		background-image: url( "../img/Instagram-nemu.png");
+		margin: 20px auto 20px auto;
+		transition: all 0.3s ease 0s;}
+	.menu-instagram:hover{
+		background-color:rgba(255,255,255,0.54);
+		background-blend-mode:lighten;
+	}
+	.menu-logo{	
+		background-image: url()
+	}
+	.hamburger {
+	  position: absolute;
+		right: 18px;
+		top: 0px;
+	  width: 50px; /* クリックしやすいようにちゃんと幅を指定する */
+	  height: 50px; /* クリックしやすいようにちゃんと高さを指定する */
+	  cursor: pointer;
+	  z-index: 300;
+	}
+	.global-nav__list {
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;
+		font-size: 20px;
+	}
+	.global-nav__item {
+	  text-align: center;
+	  padding: 0 14px;
+	}
+	.global-nav__item a {
+	  display: block;
+	  padding: 8px 0;
+	  border-bottom: 1px solid #eee;
+	  text-decoration: none;
+	  color: #111;
+	transition: all 0.2s ease 0s;
+	}
+	.global-nav__item a:hover {
+	  background-color: #eee;
+	}
+	.hamburger__line {
+	  position: absolute;
+		left: 15px;
+		width: 27px;
+		height: 2px;
+	  background-color: #111;
+	  transition: all .6s;
+	}
+	.hamburger__line--1 {
+	  top: 14px;
+	}
+	.hamburger__line--2 {
+	  top: 22px;
+	}
+	.hamburger__line--3 {
+	  top: 31px;
+	}
+	.black-bg {
+	  position: fixed;
+	  left: 0;
+	  top: 0;
+	  width: 100vw;
+	  height: 100vh;
+	  z-index: 150;
+	  background-color: #000;
+	  opacity: 0;
+	  visibility: hidden;
+	  transition: all .6s;
+	  cursor: pointer;
+	}
+	/* 表示された時用のCSS */
+	.nav-open .global-nav {
+	  right: 0;
+	}
+	.nav-open .black-bg {
+	  opacity: .8;
+	  visibility: visible;
+	}
+	.nav-open .hamburger__line--1 {
+	  transform: rotate(45deg);
+	  top: 20px;
+	}
+	.nav-open .hamburger__line--2 {
+	  width: 0;
+	  left: 50%;
+	}
+	.nav-open .hamburger__line--3 {
+	  transform: rotate(-45deg);
+	  top: 20px;
+	}
+
+}

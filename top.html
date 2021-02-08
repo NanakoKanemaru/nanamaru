@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!--最小限のビューポート設定-->
+<meta name="viewport" content="width=device-width">
+	<!--フォント-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">	
+<!-- ファビコン -->
+<link rel="icon" href="favicon/favicon-32x32.png">
+ 
+<!-- スマホ用アイコン -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+<meta charset="UTF-8">
+<title>nanamaru-portfolio</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- css -->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/style-top-sp.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/flexslider.css" />
+<!-- js -->
+<script src="js/jquery.1.8.1.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+	controlNav: false,
+    animation: "slide",
+	slideshowSpeed:4000,
+	animationSpeed:2000,
+  });
+});
+    </script>
+
+</head>
+
+<body class="fadeout">
+<div id="wrapper">
+  <!---->
+  <header class="header">
+    <nav class="global-nav">
+      <ul class="global-nav__list">
+        <li class="global-nav__item"><a href="top.html">home</a></li>
+        <li class="global-nav__item"><a href="about/about.html">about</a></li>
+        <li class="global-nav__item"><a href="works/works.html">works</a></li>
+        <li class="global-nav__item"><a href="contact/contact.html">contact</a></li>
+<!--        <li class="global-nav__item"><a href="about/about.html">blog</a></li>-->
+      </ul>
+		<div class="menu-botton">
+			<a href= "https://twitter.com/_namarumari" target="_blank"><div class="menu-twitter"></div></a>
+			<a href="https://www.instagram.com/nana_mif_ko/" target="_blank"><div class="menu-instagram"></div></a>
+		</div>
+		<div class="menu-logo"></div>
+		
+	  <div class="menu-logo">
+	  </div>
+    </nav>
+	  
+	  <div class="hamburger" id="js-hamburger"> 
+		<span class="hamburger__line hamburger__line--1"></span> 
+		<span class="hamburger__line hamburger__line--2"></span> 
+		<span class="hamburger__line hamburger__line--3"></span> 
+	  </div>
+    <div class="black-bg" id="js-black-bg"></div>
+  </header>
+  <!---->
+  <!--<div class="commo-menu"></div>-->
+	
+  <div class="side-design">
+    <div class="right"> 
+		<img src="img/saide.png">
+      	<a href= "https://twitter.com/_namarumari" target="_blank"><div class="twitter"></div></a>
+		<a href="https://www.instagram.com/nana_mif_ko/" target="_blank"><div class="instagram"></div></a>
+    </div>
+  </div>
+	
+  <div class="main">
+    <div class="top-memu">
+      <div class="logo"> <a href="top.html"><img src="img/logo.png"></a>
+        <p>NANAMARU's<br>
+          PORTFOLIO</p>
+      </div>
+      <nav>
+        <ul class="tm">
+          <li class="tm-list"><a href="about/about.html">about</a></li>
+          <li class="tm-list"><a href="works/works.html">works</a></li>
+          <li class="tm-list"><a href="contact/contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="flexslider">
+        <ul class="slides">
+          <li><a href="works/works.html"><img src="img/img4.png" /></a></li>
+          <li><a href="works/works.html"><img src="img/img1.png" /></a></li>
+          <li><a href="works/works.html"><img src="img/img2.png" /></a></li>
+          <li><a href="works/works.html"><img src="img/img3.png" /></a></li>
+        </ul>
+      </div>
+
+    </div>
+	
+  </div>
+  <div class="side-design">
+    <div class="left"> <img src="img/saide.png"> </div>
+  </div>
+  <script>
+						function toggleNav() {
+			  var body = document.body;
+			  var hamburger = document.getElementById('js-hamburger');
+			  var blackBg = document.getElementById('js-black-bg');
+
+			  hamburger.addEventListener('click', function() {
+				body.classList.toggle('nav-open');
+			  });
+			  blackBg.addEventListener('click', function() {
+				body.classList.remove('nav-open');
+			  });
+			}
+			toggleNav();
+		</script>
+	
+	<script>
+		/*設定１*/
+			$(window).on('load', function(){
+		  $('body').removeClass('fadeout');
+		});
+
+
+		/*設定２*/
+
+		$(function() {
+		  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+		  $('a:not([href^="#"]):not([target])').on('click', function(e){
+			e.preventDefault(); // ナビゲートをキャンセル
+			url = $(this).attr('href'); // 遷移先のURLを取得
+			if (url !== '') {
+			  $('body').addClass('fadeout');  // bodyに class="fadeout"を挿入
+			  setTimeout(function(){
+				window.location = url;  // 0.8秒後に取得したURLに遷移
+			  }, 800);
+			}
+			return false;
+		  });
+		});
+		</script>
+<!--
+	<script type="application/javascript">
+		$(function(){
+			let text = '';
+			$(".tm li a").each(function(){
+				let text = $(this).text();
+				$(this).html('&nbsp;&nbsp;' + text);
+			});
+			$(".tm li a").hover(function(){
+				text = $(this).text().substr(1);
+				$(this).text('/' + text);
+			}, function(){
+				text = $(this).text().substr(1);
+				$(this).html('&nbsp;' + text);
+			});
+		});
+	</script>
+-->
+
+	<script>
+		/*SPの時ホバーを消すよ*/
+		var hover = function() {
+			$(window).on('load resize orientationchange', function() {
+				if($(window).width() <= 480) {
+					$('body').removeClass('hover');
+				} else {
+					$('body').addClass('hover');
+				}
+			});
+		}
+
+		$(function(){
+			hover();
+		});
+	</script>
+</div>
+</body>
+</html>

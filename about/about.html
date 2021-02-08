@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<!-- ファビコン -->
+<link rel="icon" href="favicon/favicon-32x32.png">
+<!-- スマホ用アイコン -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<!--フォント-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">	
+	<!--アイコンフォント-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>	
+<!--最小限のビューポート設定-->
+<meta name="viewport" content="width=device-width">
+    <!-- CSS -->
+<link href="../css/style-fixed.css" rel="stylesheet" type="text/css">
+<link href="../css/about.css" rel="stylesheet" type="text/css">
+	<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<title>nanamaru-portfolio</title>
+	
+</head>
+
+<body class="fadeout">
+
+	<div id="cover"></div>
+	<div id="wrapper">
+		<header class="header">
+    		<nav class="global-nav">
+      			<ul class="global-nav__list">
+					<li class="global-nav__item"><a href= "../top.html">home</a></li>
+					<li class="global-nav__item"><a href="about.html">about</a></li>
+					<li class="global-nav__item"><a href="../works/works.html">works</a></li>
+                    <li class="global-nav__item"><a href="../contact.html">contact</a></li>
+<!--        <li class="global-nav__item"><a href="about/about.html">blog</a></li>-->
+      			</ul>
+				<div class="menu-botton">
+				  	<a href= "https://twitter.com/_namarumari" target="_blank"><div class="menu-twitter"></div></a>
+					<a href="https://www.instagram.com/nana_mif_ko/" target="_blank"><div class="menu-instagram"></div></a>
+				</div>
+				<div class="menu-logo"></div>
+				<div class="menu-logo"></div>
+			</nav>
+	  
+			<div class="hamburger" id="js-hamburger"> 
+				<span class="hamburger__line hamburger__line--1"></span> 
+				<span class="hamburger__line hamburger__line--2"></span> 
+				<span class="hamburger__line hamburger__line--3"></span> 
+			</div>
+			<div class="black-bg" id="js-black-bg"></div>
+		</header>
+	
+  		<div class="side-design">
+			<div class="right"> 
+				<img src="../img/saide.png">
+				<a href= "https://twitter.com/_namarumari" target="_blank"><div class="twitter"></div></a>
+			  	<a href="https://www.instagram.com/nana_mif_ko/" target="_blank"><div class="instagram"></div></a>
+			</div>
+  		</div>
+		
+		<div class="main">
+			<div class="title">About</div>
+			<div class="contents">
+				<div class="contents-inner">
+					<div class="text">
+					<h1>はじめまして。</h1>
+						<p>金丸なな子です。<br>
+							大分県立芸術文化短期大学を卒業後、デザイン会社でアシスタントデザイナーとして働いています。<br>
+							ネットではななまるという名前で活動しています。<br>
+							好きなものはインターネット。怖いものはチワワです。
+						</p>
+					<div class="profile">
+						<div class="profile-img">
+							
+								<img src="../img/profile.jpg" width="180" height="180">
+						</div>
+					<div class="profile-text">
+						<div class="profile-text-inner1">
+							<h2>
+								<span>ななまる</span>
+								<a href=""><i class="fab fa-twitter"></i></a>
+								<a href=""><i class="fab fa-instagram"></i></a>
+								<a href=""><i class="fab fa-facebook-f"></i></a>
+							</h2>
+							<p>nanamaru</p>
+						</div>
+						<div class="profile-text-inner1-2">
+							<div class="profile-text-inner2">
+								<div class="right">
+									名前：<br>
+									生年月日：<br>
+									所在地：<br>
+									血液型：
+								</div>
+								<div class="left">
+									金丸 なな子<br>
+									1999年7月4日
+									<br>大分県大分市
+									<br>AB 型
+								</div>
+							</div>
+							<div class="profile-text-inner3">
+								<div class="right">
+									好きなアーティスト：<br>
+<!--									好きなサイト：<br>-->
+									マイブーム： <br>
+									最近続けていること：</div>
+								<div class="left">
+									ザ・クロマニヨンズ<br>
+<!--									阿部寛のHP<br>-->
+									ミッフィーグッズ集め<br>
+									1日水を２L飲む</div>
+							</div>
+						</div>
+						<p class="fllow">fllow me <img src="../img/arrow.png" width="100"></p>
+							<div class="profile-text-inner4">
+								<div class="right">
+									Twitter：<br>
+									Instagram：<br>
+<!--									Facebook： <br>-->
+									suzuri： <br>
+<!--									ココナラ：<br>-->
+									mail：</div>
+								<div class="left">
+									_namarumari<br>
+									nana_mif_ko<br>
+<!--									kanemaru.nanako<br>-->
+									_namarumari<br>
+<!--									namarumari<br>-->
+									namarumari@gmail.com</div>
+							</div>
+						
+						
+						
+					</div>
+					</div>
+					
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="side-design">
+			<div class="left"> <img src= "../img/saide.png"> </div>
+		</div>
+  
+		
+		
+		
+		<script>
+						function toggleNav() {
+			  var body = document.body;
+			  var hamburger = document.getElementById('js-hamburger');
+			  var blackBg = document.getElementById('js-black-bg');
+
+			  hamburger.addEventListener('click', function() {
+				body.classList.toggle('nav-open');
+			  });
+			  blackBg.addEventListener('click', function() {
+				body.classList.remove('nav-open');
+			  });
+			}
+			toggleNav();
+		</script>
+		
+		
+		<script>
+		/*設定１*/
+			$(window).on('load', function(){
+		  $('body').removeClass('fadeout');
+		});
+
+
+		/*設定２*/
+
+		$(function() {
+		  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+		  $('a:not([href^="#"]):not([target])').on('click', function(e){
+			e.preventDefault(); // ナビゲートをキャンセル
+			url = $(this).attr('href'); // 遷移先のURLを取得
+			if (url !== '') {
+			  $('body').addClass('fadeout');  // bodyに class="fadeout"を挿入
+			  setTimeout(function(){
+				window.location = url;  // 0.8秒後に取得したURLに遷移
+			  }, 800);
+			}
+			return false;
+		  });
+		});
+		</script>
+
+	</div>	
+</body>
+</html>

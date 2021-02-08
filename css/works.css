@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+.contents {
+    margin-bottom: 100px;
+    border: 2px solid;
+}
+.contents-inner{
+	padding: 50px 0px;
+	width: 80%;
+	height: 70%;
+}
+
+.works{
+	display: flex;
+  	justify-content: center;
+	flex-wrap: wrap;	
+}
+
+.works-1-inner{
+	width: 300px;
+	height: 200px;
+	border: solid 2px rgba(19,19,19,1.00);
+	margin-left: auto;
+	background: #fff;
+  overflow: hidden;
+}
+
+.works-1-inner img{
+        width: auto;
+    height: 100%;
+	 opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+	
+}
+.works-1-inner img:hover{
+	opacity: .5;
+}
+
+.works-1 h1 {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+	
+}
+
+.works-1 h1::after {
+  position: absolute;
+  content: '';
+  bottom: 3px;
+  left: 0.6px;
+  width: 0;
+  height: 1px;
+  background: rgba(19,19,19,1.00);
+  transition: all 0.3s ease 0s;
+	height: 1.1px;
+}
+.works-1 h1:hover {
+  cursor: pointer;
+}
+.works-1 h1:hover::after {
+  width: 100%;
+}
+
+.works-1 h1{
+	font-size: 18px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	color: rgba(19,19,19,1.00);
+}
+.works-1 p{
+	font-size: 13px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #858282;
+}
+
+.works-1{
+	margin: 30px;
+}
+
+/*スマホ用のcssを記述*/
+/*@media screen and (max-width:375px)*/
+@media screen and (max-width:425px) {
+	body {
+    min-width: 375px;
+    width: 100vw;
+    height: 97vh;
+    font-size: 30px;
+    background-color: rgb(253, 253, 253);
+    font-family: "Noto Sans JP", sans-serif;
+}
+	
+	
+
+	.profile-text-inner1-2{
+	font-size: 11px;
+	 display: flex;
+   flex-wrap: wrap;
+}
+	
+	.profile-img {
+    text-align: center;
+    margin: 50px 0 10px 0px;
+}
+	.profile-text-inner3 {
+    display: flex;
+     min-width: 0px; 
+}
+	.profile-text-inner2 .right {
+ 
+     margin-right: 0px; 
+    text-align: right;
+}
+	
+	.profile-text-inner3 .right {
+
+    text-align: right;
+     margin-right: 0px; 
+}
+	.text h1 {
+    font-size: 1em;
+    font-weight: normal;
+}
+	.text p {
+    font-size: 0.6em;
+}
+	.fllow {
+    margin-top: 20px;
+    text-align: center;
+}
+
+	.profile-text-inner4 .left {
+    text-align: left;
+}
+	.profile-text-inner4 .right {
+    text-align: right;
+		margin-right: 10px;
+}
+	.profile-text-inner4 {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+	
+	}

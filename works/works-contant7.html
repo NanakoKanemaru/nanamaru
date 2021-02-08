@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+	<!-- ファビコン -->
+<link rel="icon" href="favicon/favicon-32x32.png">
+<!-- スマホ用アイコン -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<!--フォント-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">	
+	<!--アイコンフォント-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<meta charset="utf-8">
+<title>nanamaru-portfolio</title>
+    <!--最小限のビューポート設定-->
+<meta name="viewport" content="width=device-width">
+	<!--css-->
+<link href="../css/style-fixed.css" rel="stylesheet" type="text/css">
+<link href="../css/works-inner.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body class="fadeout">
+
+	<div id="cover"></div>
+	<div id="wrapper">
+		<header class="header">
+    		<nav class="global-nav">
+      			<ul class="global-nav__list">
+					<li class="global-nav__item"><a href= "../top.html">home</a></li>
+					<li class="global-nav__item"><a href="../about/about.html">about</a></li>
+					<li class="global-nav__item"><a href="works.html">works</a></li>
+                    <li class="global-nav__item"><a href="../contact/contact.html">contact</a></li>
+<!--        <li class="global-nav__item"><a href="about/about.html">blog</a></li>-->
+      			</ul>
+				<div class="menu-botton">
+				  	<a href= "https://twitter.com/_namarumari" target="_blank"><div class="menu-twitter"></div></a>
+					<a href="https://www.instagram.com/nana_mif_ko/" target="_blank"><div class="menu-instagram"></div></a>
+				</div>
+				<div class="menu-logo"></div>
+				<div class="menu-logo"></div>
+			</nav>
+	  
+			<div class="hamburger" id="js-hamburger"> 
+				<span class="hamburger__line hamburger__line--1"></span> 
+				<span class="hamburger__line hamburger__line--2"></span> 
+				<span class="hamburger__line hamburger__line--3"></span> 
+			</div>
+			<div class="black-bg" id="js-black-bg"></div>
+		</header>
+	
+  		<div class="side-design">
+			<div class="right"> 
+				<img src="../img/saide.png">
+				<a href= "https://twitter.com/_namarumari" target="_blank"><div class="twitter"></div></a>
+			  	<a href="https://www.instagram.com/nana_mif_ko/" target="_blank"><div class="instagram"></div></a>
+			</div>
+  		</div>
+		
+		<div class="main">
+			<div class="title"><a href="works.html">Works</a></div>
+			<div class="contents">
+				<div class="contents-inner">
+					<div class="contents-inner__works">
+						<div class="contents-inner__works-img"><img src="../img/work7/img1.png"></div>
+						<h1>BUFFALO</h1>
+						<h2>ブランディング/ロゴ/パッケージデザイン</h2>
+						<p>頑固親父のための香水</p>
+					</div>
+					
+					
+                    <div class="contents-inner__works-img"><img src="../img/work7/img1.png"></div>
+                    <div class="contents-inner__works-img"><img src="../img/work7/img1.png"></div>
+                    <div class="contents-inner__works-img"><img src="../img/work7/img1.png"></div>
+                    <div class="contents-inner__works-img"><img src="../img/work7/img1.png"></div>
+                    <div class="contents-inner__works-img"><img src="../img/work7/img1.png"></div>
+                    <div class="contents-inner__works-img"><img src="../img/work7/img1.png"></div>
+                    
+					
+                    
+					<div class="summary">
+						<div class="summary-1">
+<!--
+							<div class="summary1__text">
+								<h3>cllent</h3>
+								<p>マルハン大分古国府店</p>
+							</div>
+-->
+							<div class="summary1__text">
+								<h3>created date</h3>
+								<p>2019.7月</p>
+							</div>
+						</div>
+						<div class="summary-2">
+							<div class="summary2__text">
+								<h3>intention</h3>
+								<div class="summary2__text-p">
+									<p>課題制作</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="control-nav">
+						<div class="back">
+							<a href="works.html">一覧に戻る</a>
+						</div>
+						<div class="pager">
+							 <ul class="pagination">
+								  <li class="pre"><a href="works-contant6.html"><span>◀</span></a></li>
+								 <li class="next"><a href="works-contant8.html"><span>▶</span></a></li>
+							  </ul>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="side-design">
+			<div class="left"> <img src= "../img/saide.png"> </div>
+		</div>
+  
+		
+		
+		
+		<script>
+						function toggleNav() {
+			  var body = document.body;
+			  var hamburger = document.getElementById('js-hamburger');
+			  var blackBg = document.getElementById('js-black-bg');
+
+			  hamburger.addEventListener('click', function() {
+				body.classList.toggle('nav-open');
+			  });
+			  blackBg.addEventListener('click', function() {
+				body.classList.remove('nav-open');
+			  });
+			}
+			toggleNav();
+		</script>
+		
+		
+		<script>
+		/*設定１*/
+			$(window).on('load', function(){
+		  $('body').removeClass('fadeout');
+		});
+
+
+		/*設定２*/
+
+		$(function() {
+		  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+		  $('a:not([href^="#"]):not([target])').on('click', function(e){
+			e.preventDefault(); // ナビゲートをキャンセル
+			url = $(this).attr('href'); // 遷移先のURLを取得
+			if (url !== '') {
+			  $('body').addClass('fadeout');  // bodyに class="fadeout"を挿入
+			  setTimeout(function(){
+				window.location = url;  // 0.8秒後に取得したURLに遷移
+			  }, 800);
+			}
+			return false;
+		  });
+		});
+		</script>
+
+	</div>	
+</body>
+</html>

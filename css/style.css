@@ -1,0 +1,284 @@
+@charset "utf-8";
+body{
+	background-color: antiquewhite;
+	height: 97vh;
+	font-size: 30px;
+	background-color: #FDFDFD;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+#wrapper{
+	
+	height: 97vh;
+	margin: 10px;
+	display: flex;
+	justify-content:space-between;
+}
+
+.side-design{
+	width: 60px;
+	height: 100%;
+	text-align: center;	
+	position: relative;
+}
+.side-design .right{
+    top: 0;
+    right: 92%;
+    bottom: 0;
+    left: 0px;
+    margin: auto;
+	width: auto;
+	height: 450px;
+	z-index: 5;
+	position: fixed;
+}
+.side-design .right .twitter{
+	width: 39px; height: 39px;
+	background-image: url("../img/twitter.png");
+	margin: 50px auto 20px auto;
+}
+.side-design .right .twitter:hover{
+	background-image: url("../img/twitter-hovar.png");
+	transition: all .5s;
+}
+.side-design .right .instagram{
+	width: 39px; height: 39px;
+	background-image: url("../img/lnstagram.png");
+	margin: 0 auto 0 auto;
+}
+.side-design .right .instagram:hover{
+	background-image: url("../img/Instagram-hovar.png");
+	transition: all .5s;
+}
+
+.side-design .left{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 92%;
+    margin: auto;
+	width: auto;
+	height: 450px;
+	position: fixed;
+}
+.side-design .left .hidden{
+	visibility:hidden;
+}
+.main{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:space-between;
+	font-size: 80%;
+	
+}
+.top-memu{
+	width: auto;
+	height: auto;
+	margin: 30px 0 0 60px;
+	position:absolute; z-index: 2;
+	padding: 27px;
+	background-color: #FDFDFD;
+	border: #090909 solid 2px;
+	
+}
+.top-memu ul{
+	padding: 0;
+	margin: 0!important;
+}
+.logo p {
+    margin: 7px auto;
+    font-weight: bold;
+}
+
+.tm {
+	 list-style-type: none;
+}
+
+    li.tm-list a:hover::before {
+    color: black;
+}
+li.tm-list a::before {
+    content: "/ ";
+    color: #fff;
+    transition-duration: 0.2s;
+}
+    
+li.tm-list {
+    position: relative;}
+
+.top-memu a{
+	text-decoration: none;
+	color: rgba(19,19,19,1.00);	
+    transition-duration: 0.2s;
+}
+.contents{
+	width: 80%;
+	height: 40vw;
+	position:absolute; 
+	top: 100px;  
+	z-index: 1; 
+	margin: auto;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  
+}
+.global-nav {
+  position: fixed;
+  right: -320px; /* これで隠れる */
+  top: 0;
+  width: 300px; /* スマホに収まるくらい */
+  height: 100vh;
+  padding-top: 40px;
+  background-color: #FDFDFD;
+  transition: all .6s;
+  overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  z-index: 201;
+}
+.menu-twitter{
+	width: 36px; height: 36px;
+	background-image: url( "../img/twitter-nemu.png");
+	margin: 50px auto 20px auto;
+	transition: all 0.3s ease 0s;}
+.menu-twitter:hover{
+	background-color:rgba(255,255,255,0.54);
+	background-blend-mode:lighten;
+}
+.menu-instagram{
+	width: 36px; height: 36px;
+	background-image: url( "../img/Instagram-nemu.png");
+	margin: 20px auto 20px auto;
+	transition: all 0.3s ease 0s;}
+.menu-instagram:hover{
+	background-color:rgba(255,255,255,0.54);
+	background-blend-mode:lighten;
+}
+
+
+/*--------------------hamburger--------------------*/
+.hamburger {
+  position: absolute;
+    right: 18px;
+    top: 0px;
+  width: 50px; /* クリックしやすいようにちゃんと幅を指定する */
+  height: 50px; /* クリックしやすいようにちゃんと高さを指定する */
+  cursor: pointer;
+  z-index: 300;
+}
+.global-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+	font-size: 20px;
+}
+.global-nav__item {
+  text-align: center;
+  padding: 0 14px;
+}
+.global-nav__item a {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #111;
+transition: all 0.2s ease 0s;
+}
+.global-nav__item a:hover {
+  background-color: #eee;
+}
+.hamburger__line {
+  position: absolute;
+    left: 15px;
+    width: 27px;
+    height: 2px;
+  background-color: #111;
+  transition: all .6s;
+}
+.hamburger__line--1 {
+  top: 14px;
+}
+.hamburger__line--2 {
+  top: 22px;
+}
+.hamburger__line--3 {
+  top: 31px;
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 150;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  cursor: pointer;
+}
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+  right: 0;
+}
+.nav-open .black-bg {
+  opacity: .8;
+  visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.nav-open .hamburger__line--2 {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger__line--3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#fff;  /* 背景カラー */
+  z-index: 9999;  /* 一番手前に */
+  pointer-events: none;  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;  /* 初期値では非表示 */
+  -webkit-transition: opacity .8s ease;  /* アニメーション時間は 0.8秒 */
+  transition: opacity .8s ease;
+}
+ 
+ 
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+ 
+body.fadeout::after {
+  opacity: 1;
+}
+ 
+ 
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+ 
+body.fadeout ul{
+  -webkit-transform:scale(1.0);
+  transform:scale(1.0);
+}
+
+
+
+
